@@ -1,0 +1,28 @@
+# dependencies
+node_modules
+
+# next
+.next
+out
+
+# env
+.env
+.env.local
+.env*.local
+
+# local data store (dev fallback for KV)
+.data
+
+# runtime uploads (dev fallback for Vercel Blob)
+public/uploads
+
+# image search scratch folder
+image-search
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.vercel
+*.tsbuildinfo
+next-env.d.ts
