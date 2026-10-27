@@ -1,0 +1,334 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   ZIP STRUCTURE INHERITANCE (read-only reference: vacation-rental-master/)
+   CSS custom properties reproduced verbatim from
+   vacation-rental-master/css/style.css (:root block).
+   ========================================================================== */
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* ==========================================================================
+   Every @font-face rule from vacation-rental-master/css/flaticon.css,
+   reproduced verbatim (src paths rebased to /fonts/flaticon/font/ in public/).
+   ========================================================================== */
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("/fonts/flaticon/font/Flaticon.eot");
+  src: url("/fonts/flaticon/font/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("/fonts/flaticon/font/Flaticon.woff") format("woff"),
+       url("/fonts/flaticon/font/Flaticon.ttf") format("truetype"),
+       url("/fonts/flaticon/font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("/fonts/flaticon/font/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+/* ==========================================================================
+   Zip design tokens mapped onto Tailwind 4 theme (palette, type, radii,
+   shadows inherited from vacation-rental-master/css/style.css only).
+   ========================================================================== */
+
+@theme {
+  --font-sans: "Poppins", Arial, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-primary: #fd7792;
+  --color-primary-deep: #fc456a;
+  --color-secondary: #a3cb4c;
+  --color-light: #f3f4f7;
+  --color-dark: #272727;
+  --color-darker: #1a1a1a;
+  --color-warm: #3c312e;
+  --color-heading: rgba(0, 0, 0, 0.8);
+  --color-body: #808080;
+
+  --radius-btn: 4px;
+  --radius-card: 5px;
+  --radius-input: 5px;
+
+  --shadow-nav: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+  --shadow-card: 0px 10px 27px -9px rgba(0, 0, 0, 0.11);
+  --shadow-icon: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+  --shadow-form: 0px 15px 34px -29px rgba(0, 0, 0, 0.54);
+  --shadow-loader: 0px 24px 64px rgba(0, 0, 0, 0.24);
+}
+
+/* ==========================================================================
+   Zip component language (vacation-rental-master/css/style.css).
+   ========================================================================== */
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #fff;
+  line-height: 1.8;
+  font-weight: 400;
+  color: gray;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+
+a {
+  transition: 0.3s all ease;
+  color: #fd7792;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: #fd7792;
+}
+
+:focus-visible {
+  outline: 2px solid #fd7792;
+  outline-offset: 2px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: none !important;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.3s all ease;
+  min-height: 44px;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: #fd7792;
+  border: 1px solid #fd7792;
+  color: #fff;
+}
+.btn-primary:hover {
+  border: 1px solid #fd7792;
+  background: transparent;
+  color: #fd7792;
+}
+.btn-outline-primary {
+  border: 1px solid #fd7792;
+  background: transparent;
+  color: #fd7792;
+}
+.btn-outline-primary:hover {
+  border: 1px solid #fd7792;
+  background: #fd7792;
+  color: #fff;
+}
+.btn-white {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #000000;
+}
+.btn-white:hover {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+.btn-outline-white {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+.btn-outline-white:hover {
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000000;
+}
+
+.subheading {
+  font-size: 12px;
+  display: block;
+  font-weight: 600;
+  color: #fd7792;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-control {
+  width: 100%;
+  min-height: 44px;
+  background: #fff;
+  color: #000000;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: none !important;
+  padding: 10px 14px;
+}
+.form-control:focus,
+.form-control:active {
+  border-color: #000000;
+  outline: none;
+}
+textarea.form-control {
+  height: inherit;
+}
+
+.bg-light {
+  background: #f3f4f7 !important;
+}
+.bg-secondary {
+  background: #a3cb4c !important;
+}
+.bg-primary {
+  background: #fd7792 !important;
+}
+
+/* ==========================================================================
+   Loading screen: markup and motion copied from vacation-rental-master
+   (#ftco-loader in css/style.css and the loader markup in about.html).
+   ========================================================================== */
+
+#ftco-loader {
+  position: fixed;
+  width: 96px;
+  height: 96px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.24);
+  border-radius: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+  z-index: 1000;
+}
+
+#ftco-loader.fullscreen {
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#ftco-loader.show {
+  transition: opacity 0.4s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+#ftco-loader .circular {
+  animation: loader-rotate 2s linear infinite;
+  position: relative;
+  display: block;
+  transform: rotate(0deg);
+}
+
+#ftco-loader .path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: loader-dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@keyframes loader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -136px;
+  }
+}
+
+/* Soft pulse for the WhatsApp button (zip pulse keyframes, no glow bloom). */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(253, 119, 146, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(253, 119, 146, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(253, 119, 146, 0);
+  }
+}
+
+.wa-pulse-on-load {
+  animation: pulse 2s ease-out 3;
+}
+
+.progress-bar-fill {
+  transition: width 0.45s ease;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-pulse-on-load,
+  #ftco-loader .circular,
+  #ftco-loader .path {
+    animation: none !important;
+  }
+  .progress-bar-fill {
+    transition: none;
+  }
+}
