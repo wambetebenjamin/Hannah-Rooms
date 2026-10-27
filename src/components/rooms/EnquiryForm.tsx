@@ -63,8 +63,8 @@ export default function EnquiryForm({ roomId, roomTitle }: { roomId: string; roo
       <div className="rounded-card border-2 border-primary/40 bg-light p-6">
         <h3 className="text-xl text-black/80">Enquiry sent</h3>
         <p className="mt-2 text-sm text-gray-600 sm:text-base">
-          The host has your message. You can follow the reply from your dashboard. Keep every
-          payment documented and view the room before you pay a deposit.
+          The host has your message and can reply from their dashboard. View the room before you
+          pay a deposit.
         </p>
       </div>
     )
@@ -74,7 +74,7 @@ export default function EnquiryForm({ roomId, roomTitle }: { roomId: string; roo
     <form onSubmit={submit} className="rounded-card border border-black/10 bg-white p-5 shadow-card sm:p-6">
       <h3 className="text-xl text-black/80">Enquire about this room</h3>
       <p className="mt-1 text-sm text-gray-600">
-        Send your details and the host will reply. Fields marked required must be filled.
+        The host will reply with next steps. All fields are required.
       </p>
 
       <div className="mt-5 space-y-4">

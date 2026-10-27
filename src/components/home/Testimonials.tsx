@@ -9,21 +9,21 @@ const VOICES = [
     role: 'Student, South B',
     image: '/images/person-1.jpg',
     quote:
-      'I moved to Nairobi for my attachment and needed a room I could pay weekly. The photos matched the room, and the house rules were written down before I paid anything.',
+      'The photos matched the room. The house rules were written down before I paid anything.',
   },
   {
     name: 'Brian K.',
     role: 'Intern, Kisumu',
     image: '/images/person-2.jpg',
     quote:
-      'The weekly price and the deposit were both clear on the listing. I called the host from the site, viewed the room the same week, and got a written receipt.',
+      'Weekly price and deposit were both clear. I viewed the room first and got a written receipt.',
   },
   {
     name: 'Faith N.',
     role: 'Health worker, Mombasa',
     image: '/images/person-3.jpg',
     quote:
-      'I work short contracts in different towns. The safety tips on every listing reminded me to confirm water and power first. That one check saved me twice.',
+      'I move towns every few months. Confirming water and power first has saved me twice.',
   },
 ]
 
@@ -55,7 +55,7 @@ export default function Testimonials() {
             </figcaption>
           </div>
           <blockquote className="mt-4 text-sm leading-relaxed text-gray-600 sm:text-base">
-            “{voice.quote}”
+            {voice.quote}
           </blockquote>
         </motion.figure>
       ))}

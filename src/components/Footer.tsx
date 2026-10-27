@@ -23,7 +23,7 @@ export default function Footer() {
             <p className="footer-heading font-sans text-xl font-medium text-white">
               {SITE_NAME}
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-white/40">
+            <p className="mt-4 text-sm leading-relaxed text-white/70">
               {SITE_TAGLINE} Boarding and short-stay rooms for students, interns, and travelling
               workers across Kenya, with honest photos, clear KES prices, and safety tips on every
               listing.
@@ -54,8 +54,8 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-white/40">
-              Hannah Rooms is not a party to any lease. Always verify a room before you pay.
+            <p className="mt-4 text-sm text-white/70">
+              Not a party to any lease. Always verify a room before you pay.
             </p>
           </div>
 
@@ -114,7 +114,7 @@ export default function Footer() {
 
       <div className="mt-12 border-t border-darker bg-darker">
         <div className="w-full max-w-7xl mx-auto px-4 py-5 sm:px-6 lg:px-8">
-          <p className="text-center text-xs text-white/50">
+          <p className="text-center text-xs text-white/80">
             {new Date().getFullYear()} {SITE_NAME}. A room you can trust. Not a landlord, not a
             broker, and not a party to any lease.
           </p>

@@ -102,7 +102,7 @@ export default function CookieConsent() {
             role="dialog"
             aria-label="Manage cookie preferences"
           >
-            <h2 className="font-serif text-2xl text-black">Cookie preferences</h2>
+            <h2 className="text-2xl text-black">Cookie preferences</h2>
             <p className="mt-2 text-sm text-gray-600">
               Choose what you allow. Necessary cookies are always on because the site cannot work
               without them.

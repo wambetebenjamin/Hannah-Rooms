@@ -33,17 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en-KE">
       <head>
-        {/* Google Fonts, same families as vacation-rental-master */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i&display=swap"
-          rel="stylesheet"
-        />
+        {/* Fonts: the zip system stack from its :root (--font-family-sans-serif).
+            No Google Fonts, no display fonts. */}
+        <meta name="color-scheme" content="light" />
       </head>
       <body className="min-h-screen bg-white text-sm text-gray-600 antialiased sm:text-base">
         <LoadingScreen />

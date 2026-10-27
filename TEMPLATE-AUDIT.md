@@ -236,9 +236,9 @@ byte-for-byte to `public/fonts/flaticon/font/`.
 | `Flaticon` | `/fonts/flaticon/font/Flaticon.eot`, `/fonts/flaticon/font/Flaticon.eot?#iefix` (embedded-opentype), `/fonts/flaticon/font/Flaticon.woff` (woff), `/fonts/flaticon/font/Flaticon.ttf` (truetype), `/fonts/flaticon/font/Flaticon.svg#Flaticon` (svg) | normal | normal |
 | `Flaticon` (inside `@media screen and (-webkit-min-device-pixel-ratio: 0)`) | `/fonts/flaticon/font/Flaticon.svg#Flaticon` (svg) | (unspecified, defaults normal) | (unspecified, defaults normal) |
 
-Page fonts loaded exactly like the zip (Google Fonts link tags in
-`src/app/layout.tsx`): `Poppins:200,300,400,500,600,700,800,900` and
-`Playfair Display:400,400i,500,500i,600,600i,700,700i`.
+Page fonts: the zip `--font-family-sans-serif` system stack, used for body and
+headings. The Google Fonts display families (Poppins, Playfair Display) are not
+loaded: no display fonts, no external font requests.
 
 ### Checklist items
 
@@ -277,7 +277,7 @@ Page fonts loaded exactly like the zip (Google Fonts link tags in
 
 - Primary accent `#fd7792`, deep accent `#fc456a`, secondary `#a3cb4c`
 - Light surfaces `#f3f4f7`, footer `#272727` / `#1a1a1a`, warm dark `#3c312e`
-- Headings `Playfair Display`, body `Poppins`
+- Body and headings use the zip system font stack (`--font-family-sans-serif`)
 - Buttons: radius 4px, uppercase, letter-spacing 3px, 11px
 - Cards: radius 5px, shadow `0px 10px 27px -9px rgba(0,0,0,0.11)`
 - Forms: radius 5px, shadow `0px 15px 34px -29px rgba(0,0,0,0.54)`
