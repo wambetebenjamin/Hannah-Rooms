@@ -18,12 +18,11 @@ export default function Error({
     <main className="flex min-h-screen items-center justify-center bg-light px-4">
       <div className="w-full max-w-xl rounded-card bg-white p-8 text-center shadow-card sm:p-12">
         <p className="subheading">500</p>
-        <h1 className="mt-2 text-3xl font-bold text-black/80 sm:text-4xl">
-          Something broke on our side
+        <h1 className="mt-2 text-3xl text-black/80 sm:text-4xl">
+          Something went wrong
         </h1>
         <p className="mt-4 text-sm text-gray-600 sm:text-base">
-          We are sorry. Nothing you did caused this. Try again, or reach us on WhatsApp and we will
-          help you finish what you were doing.
+          Try again. If it keeps happening, message us on WhatsApp and we will help.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <button type="button" onClick={reset} className="btn btn-primary w-full sm:w-auto">
@@ -38,7 +37,6 @@ export default function Error({
             WhatsApp +254112272061
           </Link>
         </div>
-        <p className="mt-8 text-sm text-gray-600">Hannah Rooms. A room you can trust.</p>
       </div>
     </main>
   )

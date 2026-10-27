@@ -43,7 +43,7 @@ export default function TrustBar() {
               <div className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-secondary text-white shadow-icon">
                 <item.icon className="h-7 w-7" aria-hidden="true" />
               </div>
-              <h3 className="mt-4 text-base font-medium text-black/80" style={{ fontFamily: '"Poppins", Arial, sans-serif' }}>
+              <h3 className="mt-4 text-base font-medium text-black/80">
                 {item.title}
               </h3>
               <p className="mt-2 text-sm text-gray-600">{item.text}</p>

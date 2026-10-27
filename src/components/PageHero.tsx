@@ -20,7 +20,7 @@ export default function PageHero({
           <Link href="/" className="hover:text-primary">
             Home
           </Link>
-          <span className="mx-2 text-white/40">/</span>
+          <span className="mx-2 text-white/60">/</span>
           <span className="text-white/80">{breadcrumb}</span>
         </p>
         <h1 className="mt-2 text-3xl font-bold text-white sm:text-4xl md:text-5xl">{title}</h1>

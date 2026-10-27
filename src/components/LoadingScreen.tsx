@@ -66,10 +66,7 @@ export default function LoadingScreen() {
           stroke="#fd7792"
         />
       </svg>
-      <p
-        className="mt-5 text-center text-xs uppercase tracking-[3px] text-black"
-        style={{ fontFamily: '"Poppins", Arial, sans-serif' }}
-      >
+      <p className="mt-5 text-center text-xs uppercase tracking-[3px] text-black">
         Hannah Rooms
       </p>
       <p className="mt-1 text-center text-xs text-gray-600">{percent}%</p>

@@ -66,8 +66,10 @@
    ========================================================================== */
 
 @theme {
-  --font-sans: "Poppins", Arial, sans-serif;
-  --font-serif: "Playfair Display", serif;
+  /* Zip system font stack from the vacation-rental-master :root block.
+     No display fonts. */
+  --font-sans: var(--font-family-sans-serif);
+  --font-serif: var(--font-family-sans-serif);
 
   --color-primary: #fd7792;
   --color-primary-deep: #fc456a;
@@ -94,35 +96,38 @@
    Zip component language (vacation-rental-master/css/style.css).
    ========================================================================== */
 
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  background: #fff;
-  line-height: 1.8;
-  font-weight: 400;
-  color: gray;
+@layer base {
+  body {
+    font-family: var(--font-family-sans-serif);
+    background: #fff;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #555555;
+  }
+
+  h1, h2, h3, h4, h5 {
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 600;
+    font-family: var(--font-family-sans-serif);
+  }
+
+  a {
+    transition: 0.3s all ease;
+    color: #fd7792;
+  }
+  a:hover, a:focus {
+    text-decoration: none;
+    color: #fd7792;
+  }
+
+  :focus-visible {
+    outline: 2px solid #fd7792;
+    outline-offset: 2px;
+  }
 }
 
-h1, h2, h3, h4, h5 {
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 400;
-  font-family: "Playfair Display", serif;
-}
-
-a {
-  transition: 0.3s all ease;
-  color: #fd7792;
-}
-a:hover, a:focus {
-  text-decoration: none;
-  color: #fd7792;
-}
-
-:focus-visible {
-  outline: 2px solid #fd7792;
-  outline-offset: 2px;
-}
-
+@layer components {
 .btn {
   display: inline-flex;
   align-items: center;
@@ -217,6 +222,7 @@ textarea.form-control {
 }
 .bg-primary {
   background: #fd7792 !important;
+}
 }
 
 /* ==========================================================================

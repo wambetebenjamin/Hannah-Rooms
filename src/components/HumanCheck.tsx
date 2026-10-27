@@ -50,8 +50,7 @@ export default function HumanCheck({
     <div className="mt-3 rounded-card border-2 border-primary bg-light p-4">
       <p className="font-medium text-black">Please confirm you are human.</p>
       <p className="mt-1 text-sm text-gray-600">
-        Our automated check was not sure about the last request. Complete this quick check and send
-        again.
+        Complete this quick check, then send again.
       </p>
       {siteKey ? (
         <div ref={containerRef} className="mt-3" />

@@ -42,7 +42,7 @@ export default function HomePage() {
         <SectionHeading
           subheading="Popular areas"
           title="Start with a neighbourhood you know"
-          intro="Chips link straight into the browse page with the area filter already set."
+          intro="Estates and towns with rooms listed right now."
         />
         <AreaChips />
       </section>
@@ -51,7 +51,7 @@ export default function HomePage() {
         <SectionHeading
           subheading="Featured rooms"
           title="Rooms with photos, prices, and rules"
-          intro="Eight rooms from across Kenya. Weekly and monthly prices are shown in Kenyan shillings."
+          intro="Eight rooms from across Kenya. All prices are in Kenyan shillings."
         />
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {featured.map((room, index) => (
@@ -100,7 +100,6 @@ export default function HomePage() {
         <SectionHeading
           subheading="Testimonials"
           title="People who found their room"
-          intro="Students, interns, and workers who needed clear answers before they paid."
         />
         <div className="mt-10">
           <Testimonials />
@@ -121,8 +120,7 @@ export default function HomePage() {
             Have a spare room? List it in minutes
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-white/90">
-            Help a student or a worker find a safe place. Your first listing is free, and you stay in
-            control of who moves in.
+            Your first listing is free. You choose who moves in.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link href="/list-room" className="btn btn-white w-full sm:w-auto">
